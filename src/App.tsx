@@ -18,6 +18,11 @@ import About from '@/pages/About';
 import Auth from '@/pages/Auth';
 import Profile from '@/pages/Profile';
 import NotFound from "./pages/NotFound";
+import AdminDashboard from "./pages/admin/Dashboard";
+import MenuManagement from "./pages/admin/MenuManagement";
+import OrderManagement from "./pages/admin/OrderManagement";
+import ReservationManagement from "./pages/admin/ReservationManagement";
+import CategoryManagement from "./pages/admin/CategoryManagement";
 
 const queryClient = new QueryClient();
 
@@ -39,10 +44,15 @@ const App = () => (
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/checkout" element={<Checkout />} />
                     <Route path="/reservations" element={<Reservations />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/auth" element={<Auth />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="*" element={<NotFound />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/auth" element={<Auth />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/admin/menu" element={<MenuManagement />} />
+              <Route path="/admin/orders" element={<OrderManagement />} />
+              <Route path="/admin/reservations" element={<ReservationManagement />} />
+              <Route path="/admin/categories" element={<CategoryManagement />} />
+              <Route path="*" element={<NotFound />} />
                   </Routes>
                 </main>
                 <Footer />
